@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *arrayData;
+    NSMutableArray *arrayToDelete;
+}
 
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)addBtn:(id)sender;
+
+- (IBAction)btnDelete:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
